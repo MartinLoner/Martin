@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Martin</title>
+    <meta name="description" content="Nothing to see here.">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://martin.s-ul.eu/KCSYmRmx">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .material-symbols-rounded {
+            color: #e1e1c4;
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 600,
+                'GRAD' 0,
+                'opsz' 48
+        }
+
+        #viewport {
+            background: #000000;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        body {
+            font-family: Montserrat, sans-serif;
+            color: #e1e1c4;
+        }
+
+        /*header min-size 980*/
+        header.large {
+            border-radius: 16px;
+            background: #3e0d72;
+            box-shadow: 16px 16px 32px #3e0d72, -16px -16px 32px #3e0d72;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 16px;
+            z-index: 999;
+        }
+
+        header.small {
+            background: #3e0d72;
+            box-shadow: 0 -8px 32px #3e0d72;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+
+        .container {
+            max-width: 120rem;
+            margin-inline: auto;
+            padding-inline: 1.5rem;
+        }
+
+        .navbar:not(.logo.nav-link) {
+            display: flex;
+            height: 5rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .mob-navbar {
+            display: flex;
+            right: 0;
+            left: 0;
+            height: 4rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-menu {
+            display: none;
+            /* display: flex; */
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            justify-content: space-around
+        }
+
+        .nav-menu>button {
+            color: #000000;
+            width: 100%;
+            height: 3rem;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            border: none;
+            background: none;
+        }
+
+        .menu {
+            border: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            background: #000000;
+        }
+
+        .separator {
+            width: 100%;
+            height: 2px;
+            background: #3e0d72;
+        }
+
+        .logo {
+            height: 3rem;
+            width: auto;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .nav-link:not(.logo.nav-link) {
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        .nav-link:hover:not(.logo.nav-link) {
+            background: linear-gradient(145deg, #000000, #000000);
+            box-shadow: 6px 6px 13px #000000, -6px -6px 13px #000000;
+            transition: box-shadow .15s;
+            cursor: pointer;
+        }
+
+        .nav-link:active:not(.logo.nav-link) {
+            border-radius: 8px;
+            background: #000000;
+            box-shadow: inset 6px 6px 13px #000000, inset -6px -6px 13px #000000;
+            transition: box-shadow .15s;
+            cursor: pointer;
+        }
+
+        div.content {
+            display: grid;
+            position: absolute;
+            left: 0;
+            top: 6rem;
+            right: 0;
+            bottom: 0;
+            padding: 16px;
+            place-items: center;
+        }
+
+        .logo.nav-link {
+            left: 50%;
+            right: 50%;
+            translate: -50%;
+        }
+
+        @media only screen and (max-width: 980px) {
+            header.large {
+                display: none;
+            }
+        }
+
+        header.small {
+            display: none;
+        }
+
+        @media only screen and (max-width: 980px) {
+            header.small {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 980px) {
+            .navbar {
+                height: 2rem;
+            }
+        }
+
+        .video {
+            max-height: 400px;
+            border-radius: 16px;
+            border: 0px solid #3e0d72;
+            box-shadow: 41px 41px 82px #3e0d72, -41px -41px 82px #3e0d72;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="viewport">
+        <header class="large">
+            <nav class="navbar container">
+                <ul class="nav-list">
+                    <li>
+                        <a onclick="window.open('https://twitter.com/NotOgata','_blank')" class="nav-link">Twitter</a>
+                    </li>
+                    <li>
+                        <a onclick="window.open('https://discord.com/users/811840938724163584','_blank')" class="nav-link">Discord</a>
+                    </li>
+					<li>
+                        <a onclick="window.open('https://github.com/MartinLoner','_blank')" class="nav-link">Github</a>
+                    </li>
+					<li>
+                        <a onclick="window.open('https://steamcommunity.com/id/MartinWon/','_blank')" class="nav-link">Steam</a>
+                    </li>
+                </ul>
+                <a onclick="location.href='#'" class="logo nav-link">
+                    <img class="logo" src="https://martin.s-ul.eu/KCSYmRmx">
+                </a>
+            </nav>
+        </header>
+        <header class="small">
+            <div class="nav-menu">
+                <div style="margin-top: 8px;" class="separator"></div>
+                <button onclick="window.open('https://twitter.com/NotOgata','_blank')" class="nav-link">Twitter</button>
+                <div class="separator"></div>
+                <button onclick="windows.open('https://discord.com/users/811840938724163584','_blank')" class="nav-link">Discord</button>
+                <div class="separator"></div>
+                <button onclick="window.open('https://github.com/MartinLoner','_blank')" class="nav-link">Github</button>
+                <div class="separator"></div>
+                <button onclick="window.open('https://steamcommunity.com/id/MartinWon/','_blank')" class="nav-link">Steam</button>
+                <div style="margin-bottom: 8px;" class="separator"></div>
+            </div>
+            <nav class="container">
+                <div class="mob-navbar">
+                    <a onclick="location.href='#'" class="logo nav-link">
+                        <img class="logo" src="https://martin.s-ul.eu/KCSYmRmx">
+                    </a>
+                    <button class="material-symbols-rounded menu nav-link">menu</button>
+                </div>
+            </nav>
+        </header>
+        <div class="content">
+            <div>
+            <video width="700" src="https://hexality.s-ul.eu/pJLn7bkH.webm" controls="" class="video">
+                <audio src="https://hexality.s-ul.eu/asvD5DlP.mp3" class="audio"></audio>
+            </video>
+            <script>
+                let html = document.documentElement;
+                let video = document.querySelector(".video");
+                let audio = document.querySelector(".audio");
+				audio.volume = 0.05;
+    
+                video.addEventListener("play",() => {
+                    audio.play();
+                }, false);
+    
+                video.addEventListener("pause",() => {
+                    audio.pause();
+                }, false);
+    
+                html.addEventListener("load",() => {
+                    video.play();
+                    audio.play();
+                }, false);
+            </script>
+        </div>
+</body>
+
+</html>
